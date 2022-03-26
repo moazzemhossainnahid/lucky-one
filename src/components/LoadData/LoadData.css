@@ -15,3 +15,56 @@
     box-shadow: 2px 5px 10px #333;
     border-radius: 20px;
 }
+
+
+
+@media (max-width: 990px) {
+
+    #mainSec{
+        grid-template-columns: 5fr;
+    }
+
+    #cardDiv{
+        grid-template-columns: repeat(2, 1fr);
+        order: 2;
+    }
+
+    #itemDiv{
+        order: 1;
+        margin: 50px 0px;
+    }  
+}
+
+@media (max-width: 768px) {
+    
+    #mainSec{
+        grid-template-columns: 5fr;
+    }
+
+    #cardDiv{
+        grid-template-columns: repeat(2, 1fr);
+        order: 2;
+    }
+
+    #itemDiv{
+        order: 1;
+    }
+    
+}
+
+@media (max-width: 680px) {
+    
+    #mainSec{
+        grid-template-columns: 5fr;
+    }
+
+    #cardDiv{
+        grid-template-columns: repeat(1, 1fr);
+        order: 2;
+    }
+
+    #itemDiv{
+        order: 1;
+    }
+    
+}
