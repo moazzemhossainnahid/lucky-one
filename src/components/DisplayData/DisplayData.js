@@ -16,7 +16,7 @@ const DisplayData = (props) => {
                     <h5 id='nameStyle' className="card-title">{name}</h5>
                     </div>
                     <h4 className="card-text py-3">Price: ${price}</h4>
-                    <a onClick={() => addToCart(props.drink)} className="btn btn-outline-danger">Add to Cart <span className='ps-2'><FontAwesomeIcon icon={faShoppingCart} /></span></a>
+                    <button onClick={() => addToCart(props.drink)} className="btn btn-outline-danger">Add to Cart <span className='ps-2'><FontAwesomeIcon icon={faShoppingCart} /></span></button>
                 </div>
             </div>
         </div>

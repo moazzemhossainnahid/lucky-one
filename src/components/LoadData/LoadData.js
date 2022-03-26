@@ -31,7 +31,6 @@ const LoadData = () => {
     };
 
     const chooseOne = (products) => {
-        console.log(products);
         const randomPoint = products[Math.floor(Math.random()*products.length)];
         const {name, price} = randomPoint;
         if(randomPoint){

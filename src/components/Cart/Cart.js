@@ -4,7 +4,6 @@ import React from 'react';
 import './Cart.css';
 
 const Cart = (props) => {
-    console.log(props);
     const {cart, chooseOne, chooseAgain} = props;
     return (
         <div>
@@ -23,8 +22,8 @@ const Cart = (props) => {
             </div>
 
             <div className='py-5'>
-                <a className='btn btn-outline-danger m-2' onClick={() => {chooseOne(cart)}}>Choose One for me <FontAwesomeIcon icon={faArrowRight}/></a>
-                <a className='btn btn-outline-success m-2'  onClick={() => {chooseAgain()}}>Choose Again <FontAwesomeIcon icon={faArrowRight}/></a>
+                <button className='btn btn-outline-danger m-2' onClick={() => {chooseOne(cart)}}>Choose One for me <FontAwesomeIcon icon={faArrowRight}/></button>
+                <button className='btn btn-outline-success m-2'  onClick={() => {chooseAgain()}}>Choose Again <FontAwesomeIcon icon={faArrowRight}/></button>
             </div>
 
         </div>
