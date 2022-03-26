@@ -5,9 +5,22 @@ import './Cart.css';
 
 const Cart = (props) => {
     console.log(props);
-    const {cart, chooseOne} = props;
+    const {cart} = props;
     return (
         <div>
+            {/* {
+                cart.map(product => (
+                            <div className='cartDiv'>
+                                <img src={product.image} alt="" />
+                                <h4>{product.name}</h4>
+                                <h4><FontAwesomeIcon icon={faClose}/></h4>
+                            </div>
+                ))
+
+            } */}
+
+
+            <div>
             {
                 cart.map(product => (
                             <div className='cartDiv'>
@@ -18,12 +31,7 @@ const Cart = (props) => {
                 ))
 
             }
-
-                                
-                <div className="py-5">
-                    <a href="#" className='btn btn-outline-danger m-2' onClick={() => chooseOne()}>Choose 1 For Me <FontAwesomeIcon icon={faArrowRight}/></a>
-                    {/* <a href="#" className='btn btn-outline-success m-2' onClick={() => ChooseAnother}>Choose Again <FontAwesomeIcon icon={faArrowRight}/></a> */}
-                </div>
+            </div>
 
         </div>
     );

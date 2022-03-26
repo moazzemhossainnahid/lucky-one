@@ -27,14 +27,6 @@ const LoadData = () => {
               });
         }
     };
-
-    const chooseOne = () => {
-
-    };
-
-    // const chooseAnother = () => {
-
-    // };
     return (
         <div>
             <h2 className="display-4 fw-bold py-3">Express Shop</h2>
@@ -46,8 +38,6 @@ const LoadData = () => {
                         key = {drink.id}
                         drink = {drink}
                         addToCart = {addToCart}
-                        chooseOne = {chooseOne}
-                        chooseAnother = {chooseAnother}
                         ></DisplayData>)
                     }
                 </div>
