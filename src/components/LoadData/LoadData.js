@@ -16,9 +16,11 @@ const LoadData = () => {
     const addToCart = (product) => {
 
         if(cart.length < 4){
-            const newCart = [...cart, product];
-            setCart(newCart);
-            console.log(cart);
+            const exists = cart.find(products => products.id === product.id);
+            if(!exists){
+                const newCart = [...cart, product];
+                setCart(newCart);
+            }
         }else{
             swal({
                 title: "Sorry!",
@@ -27,6 +29,26 @@ const LoadData = () => {
               });
         }
     };
+
+    const chooseOne = (products) => {
+        console.log(products);
+        const randomPoint = products[Math.floor(Math.random()*products.length)];
+        const {name, price} = randomPoint;
+        if(randomPoint){
+            swal({
+                title: `Name: ${name}`,
+                text: `Price: ${price}`,
+                icon: "success",
+              }); 
+
+        }
+    }
+    const chooseAgain = () => {
+        let cart = [];
+        setCart(cart);
+
+    }
+
     return (
         <div>
             <h2 className="display-4 fw-bold py-3">Express Shop</h2>
@@ -45,7 +67,7 @@ const LoadData = () => {
                     <h4>Selected Items: {cart.length}</h4>
                     <div>
           
-                        <Cart cart = {cart} ></Cart>
+                        <Cart cart = {cart} chooseOne = {chooseOne} chooseAgain = {chooseAgain}></Cart>
 
                     </div>
                 </div>
