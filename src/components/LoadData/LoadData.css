@@ -1,0 +1,17 @@
+#mainSec{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+
+#cardDiv{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+#itemDiv{
+    background-color: #ddd;
+    box-shadow: 2px 5px 10px #333;
+    border-radius: 20px;
+}
