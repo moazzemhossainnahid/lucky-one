@@ -14,10 +14,6 @@ const LoadData = () => {
     }, []);
 
     const addToCart = (product) => {
-        
-        // const newCart = [...cart, product];
-        // setCart(newCart);
-        // console.log(cart);
 
         if(cart.length < 4){
             const newCart = [...cart, product];
@@ -26,11 +22,19 @@ const LoadData = () => {
         }else{
             swal({
                 title: "Sorry!",
-                text: "Only Select 4 Item!",
+                text: "You Can Select upto 4 Item!",
                 icon: "error",
               });
         }
     };
+
+    const chooseOne = () => {
+
+    };
+
+    // const chooseAnother = () => {
+
+    // };
     return (
         <div>
             <h2 className="display-4 fw-bold py-3">Express Shop</h2>
@@ -42,11 +46,13 @@ const LoadData = () => {
                         key = {drink.id}
                         drink = {drink}
                         addToCart = {addToCart}
+                        chooseOne = {chooseOne}
+                        chooseAnother = {chooseAnother}
                         ></DisplayData>)
                     }
                 </div>
                 <div id="itemDiv" className="py-5">
-                    <h3>Length: {cart.length}</h3>
+                    <h4>Selected Items: {cart.length}</h4>
                     <div>
           
                         <Cart cart = {cart} ></Cart>
