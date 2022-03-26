@@ -1,8 +1,11 @@
 import React from 'react';
+  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+  import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import './DisplayData.css';
 
 const DisplayData = (props) => {
     const {id, name, price, image} = props.drink;
+    const {addToCart} = props;
     return (
         <div className=''>
             <div className="card mx-auto my-2" style={{width:'18rem'}}>
@@ -13,7 +16,7 @@ const DisplayData = (props) => {
                     <h5 id='nameStyle' className="card-title">{name}</h5>
                     </div>
                     <h4 className="card-text py-3">Price: ${price}</h4>
-                    <a href="#" className="btn btn-outline-danger">Add to Cart</a>
+                    <a onClick={() => addToCart(props.drink)} className="btn btn-outline-danger">Add to Cart <span className='ps-2'><FontAwesomeIcon icon={faShoppingCart} /></span></a>
                 </div>
             </div>
         </div>
